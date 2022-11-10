@@ -6,9 +6,13 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/03 15:25:40 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:17:51 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+static int	len_number(int nb);
 
 /*
 Library :
@@ -25,27 +29,6 @@ Return Value :
 	The string representing the integer passed as argument.
 	If the allocation fails, the function returns NULL.
 */
-
-#include "libft.h"
-
-static int	len_number(int n)
-{
-	int	i;
-
-	i = 1;
-	if (n < 0)
-	{
-		i++;
-		n *= -1;
-	}
-	while (n > 9)
-	{
-		n = n / 10;
-		i++;
-	}
-	return (i);
-}
-
 char	*ft_itoa(int n)
 {
 	char	*s;
@@ -70,4 +53,22 @@ char	*ft_itoa(int n)
 	}
 	s[len] = (n % 10) + 48;
 	return (s);
+}
+
+static int	len_number(int nb)
+{
+	int	len;
+
+	len = 1;
+	if (nb < 0)
+	{
+		len++;
+		nb *= -1;
+	}
+	while (nb > 9)
+	{
+		nb = nb / 10;
+		len++;
+	}
+	return (len);
 }

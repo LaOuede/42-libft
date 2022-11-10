@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 15:10:52 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:11:30 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /* Library :
 	#include <string.h>
@@ -19,7 +21,7 @@ Declaration :
 	int memcmp(const void *s1, const void *s2, size_t n)
 Parameters :
     s1 - string to compare
-    s2 - Other string to compare
+    s2 - other string to compare
     n - size of the strings
 Return Value :
 	The memcmp() function returns zero if the two strings are identical,
@@ -29,16 +31,13 @@ Return Value :
     required by C and portable code should only depend on the sign of the
     returned value.
 */
-
-#include "libft.h"
-
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
 
-	i = 0;
 	if (!s1 || !s2)
 		return (0);
+	i = 0;
 	while (n > i)
 	{
 		if (((unsigned char *)s1)[i] == ((unsigned char *)s2)[i])

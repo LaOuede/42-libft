@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 15:19:23 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 15:09:07 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:06:39 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -27,9 +29,6 @@ Return value :
 	-no value-
 !!Same function as ft_memset with 0!!
 */
-
-#include "libft.h"
-
 void	ft_bzero(void *s, size_t n)
 {
 	if (!s)

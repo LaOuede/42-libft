@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/07 08:43:11 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:11:47 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -28,17 +30,17 @@ Parameters :
 Return Value :
 	The memcpy() function returns the original value of dst.
 */
-
-#include "libft.h"
-
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
+	size_t	i;
+
 	if ((!dst) || (!src))
 		return (dst);
-	while (n > 0)
+	i = 0;
+	while (n > i)
 	{
-		((unsigned char *)dst)[n - 1] = ((unsigned char *)src)[n - 1];
-		n--;
+		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		i++;
 	}
 	return (dst);
 }

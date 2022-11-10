@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /*
 Library :
 	#include <libft.h>
@@ -22,11 +24,8 @@ Parameters :
     lst - The address of the pointer to an element.
 	del - The address of the function to be applied.
 Return Value :
-	
+	None
 */
-
-#include "libft.h"
-
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)

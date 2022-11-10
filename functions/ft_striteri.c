@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 15:12:17 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:21:55 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -25,16 +27,13 @@ Parameters :
 Return Value :
 	None
 */
-
-#include "libft.h"
-
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int	i;
 
-	i = 0;
 	if (!s || !f)
 		return ;
+	i = 0;
 	if (s && f)
 	{
 		while (s[i])

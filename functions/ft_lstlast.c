@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/08 10:42:11 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:09:36 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -22,9 +24,6 @@ Parameters :
 Return Value :
 	The last element of the list.
 */
-
-#include "libft.h"
-
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)

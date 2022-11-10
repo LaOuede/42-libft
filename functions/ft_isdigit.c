@@ -6,7 +6,7 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 12:41:05 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/10/20 08:59:18 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:02:50 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,6 @@ Return value :
 	The isdigit() function returns zero if the character tests false and 
 	returns non-zero if the character tests true.
 */
-
-#include "libft.h"
-
 int	ft_isdigit(int c)
 {
 	if ('0' <= c && c <= '9')

@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 14:39:47 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:22:18 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -25,32 +27,13 @@ Return Value :
 	The "fresh" string result of the concatenation of the 2 strings.
 	If the allocation fails, the function returns NULL.
 */
-
-#include "libft.h"
-
-/*char	*ft_strjoin(char const *s1, char const *s2)
-{
-	size_t	len_s1;
-	size_t	len_s2;
-	char	*s3;
-
-	len_s1 = ft_strlen(s1);
-	len_s2 = ft_strlen(s2);
-	s3 = ft_calloc((len_s1 + len_s2 + 1), sizeof(char));
-	if (!s3)
-		return (NULL);
-	ft_strlcpy(s3, s1, len_s1 + 1);
-	ft_strlcat(s3, s2, len_s1 + len_s2 + 1);
-	return (s3);
-}*/
-
 char	*ft_strjoin(const char *s1, const char *s2)
 {
-	size_t	len_s1;
-	size_t	len_s2;
-	char	*s3;
 	size_t	i;
 	size_t	j;
+	char	*s3;
+	size_t	len_s1;
+	size_t	len_s2;
 
 	if (!s1 || !s2)
 		return (0);

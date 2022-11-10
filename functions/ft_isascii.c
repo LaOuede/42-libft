@@ -6,7 +6,7 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:41:37 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/10/20 09:02:09 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:02:09 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,6 @@ Return value :
 	The isascii() function returns zero if the character tests false and returns 
 	non-zero if the character tests true.
 */
-
-#include "libft.h"
-
 int	ft_isascii(int c)
 {
 	if (0 <= c && c <= 127)

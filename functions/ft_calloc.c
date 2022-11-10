@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 15:09:41 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:01:57 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -33,9 +35,6 @@ Return Value :
     is performed.
     The free() function does not return a value.
 */
-
-#include "libft.h"
-
 void	*ft_calloc(size_t count, size_t size)
 {
 	size_t	i;

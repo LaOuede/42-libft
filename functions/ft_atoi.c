@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/07 16:29:18 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 13:59:57 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -23,9 +25,6 @@ Parameters :
 Return Value :
 	The atoi() function returns its converted int representation.
 */
-
-#include "libft.h"
-
 int	ft_atoi(const char *str)
 {
 	int	i;

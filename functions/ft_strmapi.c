@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 09:37:47 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:23:21 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -25,9 +27,6 @@ Parameters :
 Return Value :
 	the "fresh" string created from the successive applications of f.
 */
-
-#include "libft.h"
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int		i;
@@ -36,7 +35,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return ((dest = ft_calloc(1, sizeof(char))));
 	dest = ft_calloc((ft_strlen(s) + 1), sizeof(char));
-	if (dest == 0)
+	if (dest == NULL)
 		return (0);
 	i = 0;
 	while (s[i])

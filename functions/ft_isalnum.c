@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 13:23:06 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/10/20 09:01:00 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:06:54 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -25,9 +27,6 @@ Return value :
 	The isalnum() function returns zero if the character tests false and returns 
 	non-zero if the character tests true.
 */
-
-#include "libft.h"
-
 int	ft_isalnum(int c)
 {
 	if ((ft_isalpha(c) == 1) || (ft_isdigit(c) == 1))

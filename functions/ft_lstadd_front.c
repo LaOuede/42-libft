@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /*
 Library :
 	#include "libft.h"
@@ -27,12 +29,16 @@ Return Value :
 	is used with a pointer variable pointing to a structure or union.
 	The Arrow (->) operator exists to access the members of the structure or
 	the unions using pointers.
+The members of the t_list struct are:
+		content	: The data contained in the node.
+		void *	: Allows to store any kind of data.
+		next	: The address of the next node, 
+				  or NULL if the next node is the last one.
 */
-
-#include "libft.h"
-
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!lst || !new)
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

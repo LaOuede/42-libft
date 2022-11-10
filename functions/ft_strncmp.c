@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 15:20:36 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:26:16 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -30,9 +32,6 @@ Return Value :
 	or less than the string s2. The comparison is done using unsigned characters,
 	so that `\200' is greater than `\0'.
 */
-
-#include "libft.h"
-
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;

@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 14:47:28 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 15:15:27 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:12:16 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -28,9 +30,6 @@ Parameters :
 Return Value :
 	This function returns a pointer to the memory area str.
 */
-
-#include "libft.h"
-
 void	*ft_memset(void *b, int c, size_t len)
 {
 	if (!b)

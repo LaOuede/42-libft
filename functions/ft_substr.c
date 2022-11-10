@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 10:04:23 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:24:19 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -26,9 +28,6 @@ Return Value :
 	The new substring
 	NULL if the allocation fails.
 */
-
-#include "libft.h"
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	int		i;
@@ -47,7 +46,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len_sub_s = len_s - start;
 	sub_s = ft_calloc((len_sub_s + 1), sizeof(char));
 	if (!sub_s)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (s && len_sub_s--)
 		sub_s[i++] = s[start++];

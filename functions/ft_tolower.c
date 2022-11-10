@@ -6,7 +6,7 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/10/21 12:07:00 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:24:23 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,6 @@ Return Value :
 	corresponding lower-case letter if there is one; otherwise, the argument is 
 	returned unchanged.
 */
-
-#include "libft.h"
-
 int	ft_tolower(int c)
 {
 	if ('A' <= c && c <= 'Z')

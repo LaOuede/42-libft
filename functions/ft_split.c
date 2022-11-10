@@ -6,9 +6,16 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 14:54:18 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:20:53 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
+
+static int			search_nb_word(char const *s, char c);
+static size_t		len_word(char const *s, char c);
+static char			*free_tab(char **tab);
+static const char	*get_next_word(char const *s, char c, char *split);
 
 /*
 Library :
@@ -28,8 +35,33 @@ Return Value :
 	ex : ft_split ("*hello*fellow***students*", '*') returns the array ["hello, 
 	"fellow", "students"]
 */
+char	**ft_split(char const *s, char c)
+{
+	int		word;
+	char	**split;
 
-#include "libft.h"
+	if (!s)
+		return (0);
+	while (*s == c && c != '\0')
+		s++;
+	split = ft_calloc((search_nb_word(s, c)) + 1, sizeof(char *));
+	if (!split)
+		return (0);
+	word = 0;
+	while (word < (search_nb_word(s, c) + word))
+	{
+		split[word] = ft_calloc((len_word(s, c) + 1), sizeof(char));
+		if (!split[word])
+		{
+			free_tab(split);
+			return (0);
+		}
+		s = get_next_word(s, c, split[word]);
+		word++;
+	}
+	split[word] = 0;
+	return (split);
+}
 
 static int	search_nb_word(char const *s, char c)
 {
@@ -72,7 +104,7 @@ static char	*free_tab(char **tab)
 	return (0);
 }
 
-static const char	*get_next_word(char const *s, char c, char *t)
+static const char	*get_next_word(char const *s, char c, char *split)
 {
 	int	i;
 	int	j;
@@ -81,40 +113,12 @@ static const char	*get_next_word(char const *s, char c, char *t)
 	j = 0;
 	while (s[i] && s[i] != c)
 	{
-		t[j] = s[i];
+		split[j] = s[i];
 		i++;
 		j++;
 	}
-	t[j] = '\0';
+	split[j] = '\0';
 	while (s[i] && s[i] == c)
 		i++;
 	return (&s[i]);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	int		word;
-	char	**split;
-
-	if (!s)
-		return (0);
-	while (*s == c && c != '\0')
-		s++;
-	split = ft_calloc((search_nb_word(s, c)) + 1, sizeof(char *));
-	if (!split)
-		return (0);
-	word = 0;
-	while (word < (search_nb_word(s, c) + word))
-	{
-		split[word] = ft_calloc((len_word(s, c) + 1), sizeof(char));
-		if (split[word] == 0)
-		{
-			free_tab(split);
-			return (0);
-		}
-		s = get_next_word(s, c, split[word]);
-		word++;
-	}
-	split[word] = 0;
-	return (split);
 }

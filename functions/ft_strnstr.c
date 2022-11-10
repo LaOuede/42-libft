@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/07 07:26:41 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:23:43 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -30,9 +32,6 @@ Return Value :
     nowhere in haystack, NULL is returned; otherwise a pointer to the first
     character of the first occurrence of needle is returned.
 */
-
-#include "libft.h"
-
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	h;

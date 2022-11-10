@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 15:18:33 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:21:17 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -27,20 +29,20 @@ Return Value :
 	The functions strchr() return a pointer to the located character,
 	or NULL if the character does not appear in the string
 */
-
-#include "libft.h"
-
 char	*ft_strchr(const char *s, int c)
 {
+	int	i;
+
 	if (!s)
 		return (0);
-	while (*s != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
-		if (*s == (char)c)
-			return ((char *)s);
-		s++;
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i++;
 	}
 	if ((char)c == '\0')
-		return ((char *)s);
+		return ((char *)&s[i]);
 	return (0);
 }

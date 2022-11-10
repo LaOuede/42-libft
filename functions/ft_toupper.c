@@ -6,7 +6,7 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/10/21 12:04:07 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:24:29 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,6 @@ Return Value :
 	corresponding upper-case letter if there is one; otherwise, the argument is 
 	returned unchanged.
 */
-
-#include "libft.h"
-
 int	ft_toupper(int c)
 {
 	if ('a' <= c && c <= 'z')

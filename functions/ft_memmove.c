@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 09:37:05 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:12:04 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -29,12 +31,9 @@ Parameters :
 Return Value :
 	The memmove() function returns the original value of dst.
 */
-
-#include "libft.h"
-
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
+	size_t	i;
 
 	if ((!dst) || (!src))
 		return (0);

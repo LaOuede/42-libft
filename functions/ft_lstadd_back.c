@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/07 16:19:38 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:07:59 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*
 Library :
@@ -27,22 +29,24 @@ Return Value :
 	is used with a pointer variable pointing to a structure or union.
 	The Arrow (->) operator exists to access the members of the structure or
 	the unions using pointers.
+The members of the t_list struct are:
+		content	: The data contained in the node.
+		void *	: Allows to store any kind of data.
+		next	: The address of the next node, 
+				  or NULL if the next node is the last one.
 */
-
-#include "libft.h"
-
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
-	last = *lst;
 	if (!lst || !new)
 		return ;
-	if (*lst == NULL)
+	if (!*lst)
 	{
 		*lst = new;
 		return ;
 	}
+	last = *lst;
 	while (last->next != NULL)
 		last = last->next;
 	last->next = new;

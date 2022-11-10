@@ -6,9 +6,11 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/04 15:19:13 by gle-roux         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:24:02 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 /*Library :
 	#include "libft.h"
@@ -25,13 +27,10 @@ Return Value :
 	s1 trimmed.
 	The function returns NULL is the allocation fails.
 */
-
-#include "libft.h"
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		start;
 	int		end;
+	int		start;
 	char	*s_trim;
 
 	if (!s1)
