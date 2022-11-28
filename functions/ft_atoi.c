@@ -17,11 +17,11 @@ Library :
 	#include <stdlib.h>
 Description :
 	The atoi() function converts the initial portion of the string pointed to
-    by str to int representation.
+   	by str to int representation.
 Declaration :
 	int atoi(const char *str)
 Parameters :
-    str - The string to convert to integer.
+    	str - The string to convert to integer.
 Return Value :
 	The atoi() function returns its converted int representation.
 */
