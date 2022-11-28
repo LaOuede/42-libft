@@ -23,7 +23,7 @@ Description :
 Declaration :
 	char *strchr(const char *s, int c)
 Parameters :
-    s - The string in which to checks for the occurence of c.
+    	s - The string in which to checks for the occurence of c.
 	c - The character to check the occurence of.
 Return Value :
 	The functions strchr() return a pointer to the located character,
