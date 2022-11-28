@@ -19,13 +19,13 @@ Library :
 	#include <string.h>
 Description :
 	The strdup() function allocates sufficient memory for a copy of the string
-    s1, does the copy, and returns a pointer to it.  The pointer may
-    subsequently be used as an argument to the function free(3).
-    If insufficient memory is available, NULL is returned.
+    	s1, does the copy, and returns a pointer to it.  The pointer may
+    	subsequently be used as an argument to the function free(3).
+   	 If insufficient memory is available, NULL is returned.
 Declaration :
 	char *strdup(const char *s1)
 Parameters :
-    s1 - The string to duplicate.
+   	 s1 - The string to duplicate.
 Return Value :
 	The strdup() function returns the pointer to the copy of s1.
 */
