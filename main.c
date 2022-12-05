@@ -66,12 +66,8 @@
 
 /*int	main(void) //ft_calloc
 {
-    char *src;
 	char *dest1;
 	char *dest2;
-
-
-    src = "Test de la fonction strdup";
     dest1 = ft_calloc(26, 1);
     printf("%p\n", dest1);
 	free (dest1);
@@ -399,10 +395,10 @@
     src = "Test de la fonction strdup";
     dest1 = ft_strdup(src);
     printf("%s\n", dest1);
-	free (dest);
+	free (dest1);
 	dest2 = strdup(src);
     printf("%s\n", dest2);
-	free (dest);
+	free (dest2);
 }*/
 
 /*int	main(void) //ft_striteri -- pas correct -
