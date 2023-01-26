@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 13:59:57 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 11:10:04 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ Library :
 	#include <stdlib.h>
 Description :
 	The atoi() function converts the initial portion of the string pointed to
-   	by str to int representation.
+		by str to int representation.
 Declaration :
 	int atoi(const char *str)
 Parameters :
-    	str - The string to convert to integer.
+	str - The string to convert to integer.
 Return Value :
 	The atoi() function returns its converted int representation.
 */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:11:04 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 10:46:15 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@ Library :
 	#include <string.h>
 Description :
 	The memchr() function locates the first occurrence of c (converted to an
-     unsigned char) in string s.
+	unsigned char) in string s.
 Declaration :
 	void *memchr(const void *s, int c, size_t n)
 Parameters :
-    s - The pointer in which to check for the occurence of c.
-    c - The character to check occurence of.
-    n - The number of bytes to check for any occurence of c in s.
+	s - The pointer in which to check for the occurence of c.
+	c - The character to check occurence of.
+	n - The number of bytes to check for any occurence of c in s.
 Return Value :
 	The memchr() function returns a pointer to the byte located, or NULL if no
-    such byte exists within n bytes.
+	such byte exists within n bytes.
 */
 void	*ft_memchr(const void *s, int c, size_t n)
 {

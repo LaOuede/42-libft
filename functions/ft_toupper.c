@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:24:29 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 11:20:25 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Description :
 Declaration :
 	int	toupper(int c)
 Parameters :
-    c - The character to convert.
+	c - The character to convert.
 Return Value :
 	If the argument is a lower-case letter, the toupper() function returns the 
 	corresponding upper-case letter if there is one; otherwise, the argument is 

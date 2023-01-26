@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:14:21 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 11:14:38 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Description :
 Declaration :
 	void ft_putnbr_fd(int n, int fd)
 Parameters :
-    n - The integer to print.
+	n - The integer to print.
 	fd - The file descriptor.
 Return Value :
 	None
@@ -34,7 +34,7 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n < 0)
 	{
-		n = n * -1;
+		n *= -1;
 		ft_putchar_fd('-', fd);
 	}	
 	if (n > 9)

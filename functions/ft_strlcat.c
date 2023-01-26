@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:22:55 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 13:54:06 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,24 +34,24 @@ Return Value :
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	size_t	lenght_dst;
+	size_t	len_dst;
 
 	if (!src)
 		return (0);
 	if (!dst)
 		return (ft_strlen(src));
-	lenght_dst = ft_strlen(dst);
-	if (dstsize < lenght_dst)
+	len_dst = ft_strlen(dst);
+	if (dstsize < len_dst)
 		return (dstsize + ft_strlen(src));
 	i = 0;
-	if ((dstsize > 0) && (dstsize - 1 > lenght_dst))
+	if ((dstsize > 0) && (dstsize - 1 > len_dst))
 	{
-		while ((src[i] != '\0') && (dstsize - 1 > lenght_dst + i))
+		while ((src[i] != '\0') && (dstsize - 1 > len_dst + i))
 		{
-			dst[lenght_dst + i] = src[i];
+			dst[len_dst + i] = src[i];
 			i++;
 		}
-		dst[lenght_dst + i] = '\0';
+		dst[len_dst + i] = '\0';
 	}
-	return (lenght_dst + ft_strlen(src));
+	return (len_dst + ft_strlen(src));
 }

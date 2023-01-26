@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 14:47:28 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:12:16 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 11:09:57 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ Description :
 	the character c (an unsigned char) to the first n characters of the
 	string pointed to, by the argument b.
 Declaration :
-	void *memset(void *str, int c, size_t n)
+	void *memset(void *b, int c, size_t len)
 Parameters :
-    b − This is a pointer to the block of memory to fill.
-    c − This is the value to be set. The value is passed as an int,
-	but the function fills the block of memory using the unsigned char
-	conversion of this value.
-    len − This is the number of bytes to be set to the value.
+	b − This is a pointer to the block of memory to fill.
+	c − This is the value to be set. The value is passed as an int,
+		but the function fills the block of memory using the unsigned char
+		conversion of this value.
+	len − This is the number of bytes to be set to the value.
 Return Value :
 	This function returns a pointer to the memory area str.
 */
@@ -34,10 +34,7 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	if (!b)
 		return (0);
-	while (len > 0)
-	{
-		((unsigned char *)b)[len - 1] = c;
-		len--;
-	}
+	while (len-- > 0)
+		((unsigned char *)b)[len] = c;
 	return (b);
 }

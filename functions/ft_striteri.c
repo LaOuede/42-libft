@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:21:55 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 12:09:01 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Description :
 Declaration :
 	void ft_striteri(char *s, void (*f)(unsigned int, char *))
 Parameters :
-    s - the string to map
+	s - the string to map
 	f - the function to apply to each character of s and its index
 Return Value :
 	None
@@ -34,12 +34,9 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	if (!s || !f)
 		return ;
 	i = 0;
-	if (s && f)
+	while (s[i])
 	{
-		while (s[i])
-		{
-			f(i, &s[i]);
-			i++;
-		}
+		f(i, &s[i]);
+		i++;
 	}
 }

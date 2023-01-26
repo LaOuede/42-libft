@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:12:04 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 11:09:09 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ Description :
 Declaration :
 	void *memmove(void *dst, const void *src, size_t len)
 Parameters :
-    dst − This is a pointer to the destination array
-	where the content is to be copied, type-casted to a pointer of type void*.
-    src − This is a pointer to the source of data to be copied,
-	type-casted to a pointer of type void*.
-    len − This is the number of bytes to be copied.
+	dst − This is a pointer to the destination array
+		where the content is to be copied, type-casted to a pointer of type void*.
+	src − This is a pointer to the source of data to be copied, type-casted to
+		a pointer of type void*.
+	len − This is the number of bytes to be copied.
 
 Return Value :
 	The memmove() function returns the original value of dst.

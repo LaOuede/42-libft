@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:24:02 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 12:26:00 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Description :
 Declaration :
 	char *ft_strtrim(char const *s1, char const *set)
 Parameters :
-    s1 - the string to be trimed
+	s1 - the string to be trimed
 	set - characters to trim
 Return Value :
 	s1 trimmed.

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:24:19 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 13:49:11 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Description :
 Declaration :
 	char *ft_substr(char const *s, unsigned int start, size_t len)
 Parameters :
-    s - The string from which create the substring.
+	s - The string from which create the substring.
 	start - The start index of the substring.
 	len - The size of the substring.
 Return Value :

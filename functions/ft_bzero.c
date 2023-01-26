@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 15:19:23 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:06:39 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 11:10:08 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 Library :
 	#include <string.h>
 Description :
-	The bzero() function writes n zeroed bytes to the string s.  
+	The bzero() function writes n zeroed bytes to the string s.
 	If n is zero, bzero() does nothing. The bzero() function fills the
 	first n bytes of the object pointed to by dst with zero (NUL) bytes.
 Declaration :
 	void	ft_bzero(void *s, size_t n)
 Parameters :
 	s - The pointer from which to begin erasing data. / An existing
-	object that you want to fill with zeroes.
+		object that you want to fill with zeroes.
 	n - The number of bytes to erase.
 Return value :
 	-no value-

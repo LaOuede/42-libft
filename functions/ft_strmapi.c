@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:23:21 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 13:53:13 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Description :
 Declaration :
 	char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 Parameters :
-    s - the string to map
+	s - the string to map
 	f - the function to apply to each character of s and its index
 Return Value :
 	the "fresh" string created from the successive applications of f.

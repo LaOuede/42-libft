@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:26:16 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 12:22:42 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,14 @@ Library :
 	#include <string.h>
 Description :
 	The strncmp() function lexicographically compare the null-terminated strings
-    s1 and s2.
-
-    The strncmp() function compares not more than n characters.  Because
+	s1 and s2.
+	The strncmp() function compares not more than n characters. Because
 	strncmp() is designed for comparing strings rather than binary data,
 	characters that appear after a `\0' character are not compared.
 Declaration :
 	
 Parameters :
-    int	strncmp(const char *s1, const char *s2, size_t n)
+	int	strncmp(const char *s1, const char *s2, size_t n)
 Return Value :
 	The strcmp() and strncmp() functions return an integer greater than, equal
 	to, or less than 0, according as the string s1 is greater than, equal to,

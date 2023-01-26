@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:11:47 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 11:08:23 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Parameters :
 	is to be copied, type-casted to a pointer of type void*.
 	src − This is pointer to the source of data to be copied,
 	type-casted to a pointer of type void*.
-    n − This is the number of bytes to be copied.
+	n − This is the number of bytes to be copied.
 Return Value :
 	The memcpy() function returns the original value of dst.
 */

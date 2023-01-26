@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 14:51:22 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/07 16:31:51 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/26 13:51:54 by gwenolalero      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,23 +46,29 @@
     return (0);
 }*/
 
-/*int	main(void) //ft_bzero
+/* int	main(void) //ft_bzero
 {
 	char str1[50] = "Halloween";
 	char str2[50] = "Pumpkin";
 	char str3[50] = "Trick or treat!";
 
-	printf("%s\n", str1);
+	printf("str1 = %s\n", str1);
 	ft_bzero(str1, 2);
-	printf("%s\n", str1);
-	printf("%s\n", str2);
-	ft_bzero(str2, 0);
-	printf("%s\n", str2);
-	printf("%s\n", str3);
+	printf("str1 = %s\n", str1);
+	bzero(str1, 5);
+	printf("str1 bzero = %s\n", str1);
+	printf("str2 = %s\n", str2);
+	ft_bzero(str2, 5);
+	printf("str2 = %s\n", str2);
+	bzero(str2, 5);
+	printf("str2 bzero = %s\n", str2);
+	printf("str3 = %s\n", str3);
 	ft_bzero(str3, 8);
-	printf("%s\n", str3);
+	printf("str3 = %s\n", str3);
+	bzero(str3, 5);
+	printf("str3 bzero = %s\n", str3);
 	return (0);
-}*/
+} */
 
 /*int	main(void) //ft_calloc
 {
@@ -166,15 +172,15 @@
 	return (0);
 }*/
 
-/*int	main(void) //ft_itoa
+/* int	main(void) //ft_itoa
 {
-	printf("%s\n", ft_itoa(-2147483649));
-	printf("%s\n", ft_itoa(0));
+	printf("%s\n", ft_itoa(-2147483648));
+	printf("%s\n", ft_itoa(-0));
 	printf("%s\n", ft_itoa(-1245));
-	printf("%d\n", len_number(-45));
 	printf("%s\n", ft_itoa(-45));
+	printf("%s\n", ft_itoa(40985));
 	return(0);
-}*/
+} */
 
 /*int	main(void)//ft_lstnew
 {
@@ -284,23 +290,31 @@
 	return (0);
 }*/
 
-/*int	main(void) //ft_memset
+/* int	main(void) //ft_memset
 {
 	char	buffer1[9] = "Halloween";
 	char	buffer2[14] = "Trick or treat";
 	char	buffer3[7] = "Pumpkin";
 	char	buffer4[50] = "Halloween is the new Christmas";
 
-	printf("%s\n", ft_memset(buffer1, 'A', 4));
-	printf("%s\n", memset(buffer1, 'A', 4));
-	printf("%s\n", ft_memset(buffer2, 'w', 10));
-	printf("%s\n", memset(buffer2, 'w', 10));
-	printf("%s\n", ft_memset(buffer3, '5', 1));
-	printf("%s\n", memset(buffer3, '5', 1));
-	printf("%s\n", ft_memset(buffer4, '~', 3));
-	printf("%s\n", memset(buffer4, '~', 3));
+	ft_memset(buffer1, 'A', 4);
+	puts(buffer1);
+	memset(buffer1, 'A', 4);
+	puts(buffer1);
+	ft_memset(buffer2, 'w', 10);
+	puts(buffer2);
+	memset(buffer2, 'w', 10);
+	puts(buffer2);
+	ft_memset(buffer3, '5', 1);
+	puts(buffer3);
+	memset(buffer3, '5', 1);
+	puts(buffer3);
+	ft_memset(buffer4, '~', 3);
+	puts(buffer4);
+	memset(buffer4, '~', 3);
+	puts(buffer4);
 	return (0);
-}*/
+} */
 
 /*int	main(void) //ft_putchar_fd
 {
@@ -315,7 +329,7 @@
 	return (0);
 }*/
 
-/*int	main(void) //ft_putnbr_fd
+/* int	main(void) //ft_putnbr_fd
 {
 	ft_putnbr_fd(0, 1);
 	write(1, "\n", 1);
@@ -336,7 +350,7 @@
 	ft_putnbr_fd(-2147483648, 1);
 	write(1, "\n", 1);
 	return (0);
-}*/
+} */
 
 /*int	main(void) //ft_putstr_fd
 {
@@ -386,7 +400,7 @@
 	return (0);
 }*/
 
-/*int	main(void) //ft_strdup
+/* int	main(void) //ft_strdup
 {
     char *src;
     char *dest1;
@@ -399,20 +413,23 @@
 	dest2 = strdup(src);
     printf("%s\n", dest2);
 	free (dest2);
-}*/
+} */
 
-/*int	main(void) //ft_striteri -- pas correct -
+/* int	main(void) //ft_striteri -- pas correct -
 {
 	char str[] = "Let's roll initiative";
 
-	ft_strlcpy(str, "hello my name is", 7);
+	ft_strlcpy(str, "hello my name is", 17);
+	printf("%s\n", str);
 	ft_striteri(str, ft_toupper);
-	if (ft_strcmp("HELLO MY NAME IS", str) != 0)
-		ft_putendl("ERROR: ft_striteri failed.");
+	printf("%s\n", str);
+	if (strcmp("HELLO MY NAME IS", str) != 0)
+		ft_putendl_fd("ERROR: ft_striteri failed.", 1);
 	ft_striteri(NULL, ft_toupper);
-	ft_putendl_fd("OK: ft_striteri passed.");
-	ft_putendl_fd("---------");
-}*/
+	printf("%s\n", str);
+	ft_putendl_fd("OK: ft_striteri passed.", 1);
+	ft_putendl_fd("---------", 1);
+} */
 
 /*int	main(void) //ft_strjoin
 {
@@ -465,7 +482,7 @@
 	return (0);
 }*/
 
-/*int	main(void) //ft_strlcpy
+int	main(void) //ft_strlcpy
 {
 	char	src1[9] = "Halloween";
 	char	src2[9] = "Epic Fail";
@@ -485,7 +502,7 @@
 	printf("%zu\n", ft_strlcpy(dest4, src4, 3));
 	//printf("%lu\n", strlcpy(dest4, src4, 3));
 	return (0);
-}*/
+}
 
 /*int	main(void) //ft_strlen
 {
@@ -615,7 +632,7 @@ int	main(void)
 	return (0);
 }*/
 
-/*int	main(void) //ft_substr
+/* int	main(void) //ft_substr
 {
     char	chaine[50] = "Let's play initiative";
 
@@ -626,7 +643,7 @@ int	main(void)
 	printf("%s\n", ft_substr(chaine, 3, 25));
 	//printf("%s\n", ft_substr("hola", 0, 18446744073709551615));
 	return (0);
-}*/
+} */
 
 /*int	main(void) //ft_tolower
 {
