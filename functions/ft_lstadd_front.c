@@ -20,7 +20,7 @@ Description :
 Declaration :
 	void	ft_lstadd_front(t_list **lst, t_list *new)
 Parameters :
-    lst - the adress of a pointer to the first link of a list.
+	lst - the adress of a pointer to the first link of a list.
 	new - the link to add at the beginning of the list.
 Return Value :
 	None.

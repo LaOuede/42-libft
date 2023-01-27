@@ -6,7 +6,7 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:09:08 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/27 11:09:37 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,15 @@ Return Value :
 */
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list	*temp;
+	t_list	*ptr;
 
 	if (!lst || !del)
 		return ;
-	temp = *lst;
+	ptr = *lst;
 	while (*lst != NULL)
 	{
-		temp = (*lst)->next;
+		ptr = (*lst)->next;
 		ft_lstdelone(*lst, del);
-		*lst = temp;
+		*lst = ptr;
 	}
 }

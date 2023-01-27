@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gwenolaleroux <gwenolaleroux@student.42    +#+  +:+       +#+        */
+/*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 14:51:22 by gle-roux          #+#    #+#             */
-/*   Updated: 2023/01/26 13:51:54 by gwenolalero      ###   ########.fr       */
+/*   Updated: 2023/01/27 12:40:34 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,9 +172,27 @@
 	return (0);
 }*/
 
+/* int	main(void) //ft_iswhitespace
+{
+	int	c1 = ' ';
+	int	c2 = 32;
+	int	c3 = '\n';
+	int	c4 = 10;
+
+	printf("%d\n", ft_iswhitespace(c1));
+	printf("%d\n", ft_iswhitespace(c2));
+	printf("%d\n", ft_iswhitespace(c3));
+	printf("%d\n", ft_iswhitespace(c4));
+
+	return (0);
+} */
+
 /* int	main(void) //ft_itoa
 {
-	printf("%s\n", ft_itoa(-2147483648));
+	char *test;
+	test = ft_itoa(-2147483648);
+	printf("%s\n", test);
+	free(test);
 	printf("%s\n", ft_itoa(-0));
 	printf("%s\n", ft_itoa(-1245));
 	printf("%s\n", ft_itoa(-45));
@@ -482,7 +500,7 @@
 	return (0);
 }*/
 
-int	main(void) //ft_strlcpy
+/* int	main(void) //ft_strlcpy
 {
 	char	src1[9] = "Halloween";
 	char	src2[9] = "Epic Fail";
@@ -502,7 +520,7 @@ int	main(void) //ft_strlcpy
 	printf("%zu\n", ft_strlcpy(dest4, src4, 3));
 	//printf("%lu\n", strlcpy(dest4, src4, 3));
 	return (0);
-}
+} */
 
 /*int	main(void) //ft_strlen
 {

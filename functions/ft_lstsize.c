@@ -6,7 +6,7 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:10:22 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/27 10:55:54 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,25 +20,25 @@ Description :
 Declaration :
 	int ft_lstsize(t_list *lst)
 Parameters :
-    lst - the beginning of the list
+	lst - the beginning of the list
 Return Value :
 	The size of the list
 */
 int	ft_lstsize(t_list *lst)
 {
 	int		size;
-	t_list	*temp;
+	t_list	*ptr;
 
 	size = 0;
-	temp = lst;
+	ptr = lst;
 	if (!lst)
 		return (0);
-	while (temp->next != NULL)
+	while (ptr->next != NULL)
 	{
 		size++;
-		temp = temp->next;
+		ptr = ptr->next;
 	}
-	if (temp->next == NULL)
+	if (ptr->next == NULL)
 		size++;
 	return (size);
 }

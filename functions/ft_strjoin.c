@@ -6,7 +6,7 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:22:18 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/27 11:17:14 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,27 +30,24 @@ Return Value :
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	size_t	i;
-	size_t	j;
 	char	*s3;
-	size_t	len_s1;
-	size_t	len_s2;
+	size_t	len;
 
-	if (!s1 || !s2)
-		return (0);
-	len_s1 = ft_strlen(s1);
-	len_s2 = ft_strlen(s2);
-	s3 = ft_calloc((len_s1 + len_s2 + 1), sizeof(char));
+	len = (ft_strlen(s1) + ft_strlen(s2));
+	s3 = ft_calloc((len + 1), sizeof(char));
 	if (!s3)
 		return (0);
-	i = 0;
-	while (s1 && len_s1--)
+	len = 0;
+	while (s1[len])
 	{
-		s3[i] = s1[i];
+		s3[len] = s1[len];
+		len++;
+	}
+	i = 0;
+	while (s2[i])
+	{
+		s3[len + i] = s2[i];
 		i++;
 	}
-	j = 0;
-	while (s2 && len_s2--)
-		s3[i++] = s2[j++];
-	s3[i] = '\0';
 	return (s3);
 }

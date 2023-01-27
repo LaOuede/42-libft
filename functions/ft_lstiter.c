@@ -21,7 +21,7 @@ Description :
 Declaration :
 	void ft_lstiter(t_list *lst, void (*f)(void *))
 Parameters :
-    lst - The address of the pointer to an element.
+	lst - The address of the pointer to an element.
 	del - The address of the function to be applied.
 Return Value :
 	None

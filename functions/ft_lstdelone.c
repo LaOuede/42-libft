@@ -6,7 +6,7 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:09:17 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/27 10:58:14 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Description :
 Declaration :
 	void ft_lstdelone(t_list *lst, void (*del)(void *))
 Parameters :
-    lst - The element to free
+	lst - The element to free
 	del - The address of the function to delete the content of the element.
 Return Value :
 	None.

@@ -6,16 +6,67 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:20:53 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/27 13:03:48 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			search_nb_word(char const *s, char c);
-static size_t		len_word(char const *s, char c);
-static char			*free_tab(char **tab);
-static const char	*get_next_word(char const *s, char c, char *split);
+static int	count_wd(char const *s, char c)
+{
+	int	i;
+	int	len;
+	int	counter;
+
+	i = 0;
+	len = ft_strlen(s);
+	counter = 0;
+	while (i < len)
+	{
+		while (s[i] && s[i] != c)
+				i++;
+		while (s[i] && s[i] == c && c != '\0')
+				i++;
+		counter++;
+	}
+	return (counter);
+}
+
+static int	len_wd(char const *s, char c)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+		i++;
+	return (i);
+}
+
+static char	*free_tab(char **tab)
+{
+	int	i;
+
+	i = 0;
+	while (tab[i])
+		free(tab[i++]);
+	free(tab);
+	return (0);
+}
+
+static const char	*get_next_wd(char const *s, char c, char *array)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] && s[i] != c)
+	{
+		array[i] = s[i];
+		i++;
+	}
+	while (s[i] && s[i] == c)
+		i++;
+	return (&s[i]);
+}
 
 /*
 Library :
@@ -37,88 +88,27 @@ Return Value :
 */
 char	**ft_split(char const *s, char c)
 {
-	int		word;
-	char	**split;
+	int		wd;
+	char	**array;
 
 	if (!s)
 		return (0);
 	while (*s == c && c != '\0')
 		s++;
-	split = ft_calloc((search_nb_word(s, c)) + 1, sizeof(char *));
-	if (!split)
+	array = ft_calloc((count_wd(s, c)) + 1, sizeof(char *));
+	if (!array)
 		return (0);
-	word = 0;
-	while (word < (search_nb_word(s, c) + word))
+	wd = 0;
+	while (wd < (count_wd(s, c) + wd))
 	{
-		split[word] = ft_calloc((len_word(s, c) + 1), sizeof(char));
-		if (!split[word])
+		array[wd] = ft_calloc((len_wd(s, c) + 1), sizeof(char));
+		if (!array[wd])
 		{
-			free_tab(split);
+			free_tab(array);
 			return (0);
 		}
-		s = get_next_word(s, c, split[word]);
-		word++;
+		s = get_next_wd(s, c, array[wd]);
+		wd++;
 	}
-	split[word] = 0;
-	return (split);
-}
-
-static int	search_nb_word(char const *s, char c)
-{
-	int	i;
-	int	s_len;
-	int	nb_word;
-
-	i = 0;
-	s_len = ft_strlen(s);
-	nb_word = 0;
-	while (i < s_len)
-	{
-		while (s[i] && s[i] != c)
-				i++;
-		while (s[i] && s[i] == c && c != '\0')
-				i++;
-		nb_word++;
-	}
-	return (nb_word);
-}
-
-static size_t	len_word(char const *s, char c)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	return (i);
-}
-
-static char	*free_tab(char **tab)
-{
-	int	i;
-
-	i = 0;
-	while (tab[i])
-		free(tab[i++]);
-	free(tab);
-	return (0);
-}
-
-static const char	*get_next_word(char const *s, char c, char *split)
-{
-	int	i;
-	int	j;
-
-	i = 0;
-	j = 0;
-	while (s[i] && s[i] != c)
-	{
-		split[j] = s[i];
-		i++;
-		j++;
-	}
-	split[j] = '\0';
-	while (s[i] && s[i] == c)
-		i++;
-	return (&s[i]);
+	return (array);
 }

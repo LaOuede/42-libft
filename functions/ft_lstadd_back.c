@@ -6,7 +6,7 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:07:59 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/27 10:56:57 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Description :
 Declaration :
 	void	ft_lstadd_back(t_list **lst, t_list *new)
 Parameters :
-    lst - the adress of a pointer to the first link of a list.
+	lst - the adress of a pointer to the first link of a list.
 	new - the link to add at the end of the list.
 Return Value :
 	None.

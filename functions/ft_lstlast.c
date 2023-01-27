@@ -6,7 +6,7 @@
 /*   By: gle-roux <gle-roux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 08:48:10 by gle-roux          #+#    #+#             */
-/*   Updated: 2022/11/10 14:09:36 by gle-roux         ###   ########.fr       */
+/*   Updated: 2023/01/27 10:56:13 by gle-roux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Description :
 Declaration :
 	t_list *ft_lstlast(t_list *lst)
 Parameters :
-    lst - the beginning of the list.
+	lst - the beginning of the list.
 Return Value :
 	The last element of the list.
 */
