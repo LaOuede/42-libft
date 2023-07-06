@@ -15,7 +15,7 @@ Go to [42 Québec](https://42quebec.com/) to discover the course ! 👈
 
 ---
 
-<h3 align="left">Encoded functions</h3>
+<h3 align="left">Encoded functions ⚙️</h3>
 
 Functions can be divided into different categories :
 - Checking and manipulating characters
@@ -27,7 +27,7 @@ Functions can be divided into different categories :
 
 ---
 
-<h3 align="left">What I've learned</h3>
+<h3 align="left">What I've learned 📚</h3>
 
 I've acquired a lot of basic knowledge on C programming :
 - Makefile and compilation
@@ -37,7 +37,7 @@ I've acquired a lot of basic knowledge on C programming :
 
 ---
 
-<h3 align="left">If I had to do it all over again</h3>
+<h3 align="left">If I had to do it all over again 🗒</h3>
 
 - I would maximize function reuse whenever possible
 - I would recode ft_split.c differently (this one was a challenge for me!)
